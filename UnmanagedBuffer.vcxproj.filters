@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="rapidxml">
+      <UniqueIdentifier>{2f4de3de-c576-4a7e-96cb-dd2049276699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{fee6ecf7-8260-41cd-a1aa-aae58623c5e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnmanangedBuffer">
+      <UniqueIdentifier>{984d3a27-cd14-49bb-a1f3-8e63a4ce2bec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="rapidxml\license.txt">
+      <Filter>rapidxml</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rapidxml\manual.html">
+      <Filter>rapidxml</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="rapidxml\rapidxml.hpp">
+      <Filter>rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml\rapidxml_iterators.hpp">
+      <Filter>rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml\rapidxml_print.hpp">
+      <Filter>rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml\rapidxml_utils.hpp">
+      <Filter>rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Common.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Exceptions.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MemoryPool.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ObjectPool.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Platform.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\StringUtils.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\TransferTraits.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UClassType.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UDictType.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UFloatType.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UIntType.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UListType.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UnmanagedBuffer.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UObject.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UObjectClass.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UObjectDefine.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UObjectDict.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UObjectFloat.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UObjectInt.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UObjectList.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UObjectString.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UStringType.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UType.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UTypeDefine.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UnmanagedBuffer\UTypes.hpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ErrorCode.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\MemoryPool.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\StringUtils.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="UnmanagedBuffer\main.cpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="UnmanagedBuffer\UnmanagedBuffer.cpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="UnmanagedBuffer\UObject.cpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="UnmanagedBuffer\UObjectClass.cpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="UnmanagedBuffer\UObjectDefine.cpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="UnmanagedBuffer\UObjectDict.cpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="UnmanagedBuffer\UObjectFloat.cpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="UnmanagedBuffer\UObjectInt.cpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="UnmanagedBuffer\UObjectList.cpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="UnmanagedBuffer\UType.cpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="UnmanagedBuffer\UTypeDefine.cpp">
+      <Filter>UnmanangedBuffer</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -94,6 +94,9 @@ void* UInt8Object_FromByte(Int8 value)
 {
 	auto uObj = (UInt8Object*)UObject_GC_New(UType::GetUTypeByName("Int8"));
 
+	if (uObj)
+		uObj->SetVal(value);
+
 	return uObj;
 }
 
@@ -124,6 +127,9 @@ void* UUInt8Object_FromSByte(UInt8 value)
 {
 	auto uObj = (UUInt8Object*)UObject_GC_New(UType::GetUTypeByName("UInt8"));
 
+	if (uObj)
+		uObj->SetVal(value);
+
 	return uObj;
 }
 
@@ -152,6 +158,9 @@ Int16 UInt16Object_AsShort(void* puObj)
 void* UInt16Object_FromShort(Int16 value)
 {
 	auto uObj = (UInt16Object*)UObject_GC_New(UType::GetUTypeByName("Int16"));
+
+	if (uObj)
+		uObj->SetVal(value);
 
 	return uObj;
 }
@@ -182,6 +191,9 @@ void* UUInt16Object_FromUShort(UInt16 value)
 {
 	auto uObj = (UUInt16Object*)UObject_GC_New(UType::GetUTypeByName("UInt16"));
 
+	if (uObj)
+		uObj->SetVal(value);
+
 	return uObj;
 }
 
@@ -210,6 +222,9 @@ Int32 UInt32Object_AsInt(void* puObj)
 void* UInt32Object_FromInt(Int32 value)
 {
 	auto uObj = (UInt32Object*)UObject_GC_New(UType::GetUTypeByName("Int32"));
+
+	if (uObj)
+		uObj->SetVal(value);
 
 	return uObj;
 }
@@ -240,6 +255,9 @@ void* UUInt32Object_FromUInt(UInt32 value)
 {
 	auto uObj = (UUInt32Object*)UObject_GC_New(UType::GetUTypeByName("UInt32"));
 
+	if (uObj)
+		uObj->SetVal(value);
+
 	return uObj;
 }
 
@@ -269,6 +287,9 @@ void* UInt64Object_FromLong(Int64 value)
 {
 	auto uObj = (UInt64Object*)UObject_GC_New(UType::GetUTypeByName("Int64"));
 
+	if (uObj)
+		uObj->SetVal(value);
+
 	return uObj;
 }
 
@@ -297,6 +318,9 @@ UInt64 UUInt64Object_AsULong(void* puObj)
 void* UUInt64Object_FromULong(UInt64 value)
 {
 	auto uObj = (UUInt64Object*)UObject_GC_New(UType::GetUTypeByName("UInt64"));
+
+	if (uObj)
+		uObj->SetVal(value);
 
 	return uObj;
 }
@@ -370,7 +394,10 @@ void* UStringObject_FromString(const char* str)
 	if (uType == nullptr)
 		return nullptr;
 
-	auto uObj = UObject_GC_New(uType);
+	auto uObj = (UStringObject*)UObject_GC_New(uType);
+
+	if (uObj)
+		uObj->SetVal(str);
 
 	return (void*)uObj;
 }

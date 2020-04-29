@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace SunnyMobile.UnmanagedBuffer
+namespace UnmanagedBuffer
 {
     /// <summary>
     /// 原生类型转换器
@@ -33,35 +32,9 @@ namespace SunnyMobile.UnmanagedBuffer
             m_Serializes.Add(typeof(float), new FloatSerializer());
             m_Serializes.Add(typeof(double), new DoubleSerializer());
             m_Serializes.Add(typeof(string), new StringSerializer());
-            m_Serializes.Add(typeof(SunnyFramework.SValue), new SValueSerializer());
-            m_Serializes.Add(typeof(SunnyFramework.AssetType), new EnumSerializer<SunnyFramework.AssetType>());
-            m_Serializes.Add(typeof(SunnyFramework.GUITweenType), new EnumSerializer<SunnyFramework.GUITweenType>());
-            m_Serializes.Add(typeof(SunnyGame.ApplicationType), new EnumSerializer<SunnyGame.ApplicationType>());
-            m_Serializes.Add(typeof(SunnyFramework.UITweenerStyle), new EnumSerializer<SunnyFramework.UITweenerStyle>());
 
             //UserDefine Begin
-			m_Serializes.Add(typeof(global), new global_Serializer());
-			m_Serializes.Add(typeof(jump), new jump_Serializer());
-			m_Serializes.Add(typeof(map), new map_Serializer());
-			m_Serializes.Add(typeof(race), new race_Serializer());
-			m_Serializes.Add(typeof(randname), new randname_Serializer());
-			m_Serializes.Add(typeof(role), new role_Serializer());
-			m_Serializes.Add(typeof(role_level), new role_level_Serializer());
-			m_Serializes.Add(typeof(school), new school_Serializer());
-			m_Serializes.Add(typeof(BootData), new BootData_Serializer());
-			m_Serializes.Add(typeof(BootConfig), new BootConfig_Serializer());
-			m_Serializes.Add(typeof(AssetInfo), new AssetInfo_Serializer());
-			m_Serializes.Add(typeof(AssetDependencies), new AssetDependencies_Serializer());
-			m_Serializes.Add(typeof(LualibConfig), new LualibConfig_Serializer());
-			m_Serializes.Add(typeof(BaseLangConfig), new BaseLangConfig_Serializer());
-			m_Serializes.Add(typeof(ParticleConfig), new ParticleConfig_Serializer());
-			m_Serializes.Add(typeof(TweenData), new TweenData_Serializer());
-			m_Serializes.Add(typeof(GUITweenConfig), new GUITweenConfig_Serializer());
-			m_Serializes.Add(typeof(CameraConfig), new CameraConfig_Serializer());
-			m_Serializes.Add(typeof(SoundsConfig), new SoundsConfig_Serializer());
-			m_Serializes.Add(typeof(FontConfig), new FontConfig_Serializer());
-			m_Serializes.Add(typeof(SpriteAniConfig), new SpriteAniConfig_Serializer());
-			m_Serializes.Add(typeof(BasicConfig), new BasicConfig_Serializer());
+
             //UserDefine End
         }
 

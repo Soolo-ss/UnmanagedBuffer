@@ -4,7 +4,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Collections;
 
-namespace SunnyMobile.UnmanagedBuffer
+namespace UnmanagedBuffer
 {
     public class UnmanagedArray : UnmanagedObject
     {

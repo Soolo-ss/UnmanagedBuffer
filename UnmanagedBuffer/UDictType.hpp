@@ -10,12 +10,7 @@ namespace UnmanagedBuffer
 	{
 	public:
 		DictType()
-			: UType(UTypeType::UTYPE_DICT), m_KeyType(nullptr), m_ValueType(nullptr)
-		{
-
-		}
-
-		DictType(std::shared_ptr<UType> uKeyType, std::shared_ptr<UType> uValueType) : UType(UTypeType::UTYPE_DICT), m_KeyType(uKeyType), m_ValueType(uValueType)
+			: UType(UTypeType::UTYPE_DICT)
 		{
 
 		}
@@ -68,10 +63,6 @@ namespace UnmanagedBuffer
 
 	private:
 		const static size_t m_ObjSize = sizeof(UDictObject);
-
-	private:
-		std::shared_ptr<UType> m_KeyType;
-		std::shared_ptr<UType> m_ValueType;
 	};
 
 

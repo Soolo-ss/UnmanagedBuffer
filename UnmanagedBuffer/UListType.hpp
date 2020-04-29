@@ -9,12 +9,7 @@ namespace UnmanagedBuffer
 	class ListType : public UType
 	{
 	public:
-		ListType() : UType(UTypeType::UTYPE_LIST), m_ChildType(nullptr)
-		{
-
-		}
-
-		ListType(std::shared_ptr<UType> childType) : UType(UTypeType::UTYPE_LIST), m_ChildType(childType)
+		ListType() : UType(UTypeType::UTYPE_LIST)
 		{
 
 		}
@@ -45,11 +40,6 @@ namespace UnmanagedBuffer
 #endif
 		}
 
-		std::shared_ptr<UType> GetChildType()
-		{
-			return m_ChildType;
-		}
-
 		virtual size_t Hash(const UObject* uObj) override
 		{
 			return 0;
@@ -62,8 +52,5 @@ namespace UnmanagedBuffer
 	
 	private:
 		const static size_t m_ObjSize = sizeof(UListObject);
-
-	private:
-		std::shared_ptr<UType> m_ChildType;
 	};
 }

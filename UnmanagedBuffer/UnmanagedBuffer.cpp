@@ -466,24 +466,6 @@ void* UClassObject_GetField(void* uObj, const char* field)
 	return classObj->GetField(field);
 }
 
-Int32 UTypeList_New(const char* elementType)
-{
-	auto childType = UType::GetUTypeByName(elementType);
-	if (!childType)
-		return -1;
-
-	std::string uTypeName = std::string("List<") + elementType + ">";
-
-	std::shared_ptr<UType> uType = UType::GetUTypeByName(uTypeName);
-	if (uType)
-		return 0;
-
-	uType = std::make_shared<ListType>(childType);
-	UType::CreateNewType(uTypeName, uType);
-
-	return 0;
-}
-
 Int32 UObjectList_Count(void* uObj)
 {
 	if (!UObject_Check_List((UObject*)uObj))
@@ -549,29 +531,6 @@ void UObjectList_Clear(void* uObj)
 		return;
 
 	list->Clear();
-}
-
-Int32 UTypeDict_New(const char* keyType, const char* valueType)
-{
-	auto uKeyType = UType::GetUTypeByName(keyType);
-	if (!uKeyType)
-		return -1;
-
-	auto uValueType = UType::GetUTypeByName(valueType);
-	if (!uValueType)
-		return -1;
-
-	std::string uDictTypeName = "Dict<";
-	uDictTypeName = uDictTypeName + keyType + "," + valueType + ">";
-
-	std::shared_ptr<UType> uType = UType::GetUTypeByName(uDictTypeName);
-	if (uType)
-		return 0;
-
-	std::shared_ptr<DictType> uDictType = std::make_shared<DictType>(uKeyType, uValueType);
-	UType::CreateNewType(uDictTypeName, uDictType);
-
-	return 0;
 }
 
 Int32 UObjectDict_Count(void* uObj)

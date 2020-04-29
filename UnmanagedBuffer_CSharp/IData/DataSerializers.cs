@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using SunnyFramework;
 
-namespace SunnyMobile.UnmanagedBuffer
+namespace UnmanagedBuffer
 {
     /// <summary>
     /// 原生类型转化为Native类型的转换器
@@ -648,81 +647,6 @@ namespace SunnyMobile.UnmanagedBuffer
         }
     }
 
-    public class SValueSerializer : IDataSerializer<SunnyFramework.SValue>
-    {
-        public SValue LoadValue(IntPtr uObj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public object LoadValue(Type t, IntPtr uObj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void StoreValue(IntPtr uObj, SValue value)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void StoreValue(Type t, IntPtr uObj, object value)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string UnmanagedName()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string UnmanagedName(Type t)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IntPtr UObjectNew(SValue value)
-        {
-            switch(value.type)
-            {
-                case SValue.Type.Boolean:
-                    return DataSerializeUtils.UObjectNew<Boolean>(value.ToBoolean());
-                case SValue.Type.Char:
-                    return DataSerializeUtils.UObjectNew<Char>(value.ToChar());
-                case SValue.Type.Double:
-                    return DataSerializeUtils.UObjectNew<Double>(value.ToDouble());
-                case SValue.Type.Single:
-                    return DataSerializeUtils.UObjectNew<Single>(value.ToSingle());
-                case SValue.Type.Int8:
-                    return DataSerializeUtils.UObjectNew<sbyte>(value.ToInt8());
-                case SValue.Type.Int16:
-                    return DataSerializeUtils.UObjectNew<Int16>(value.ToInt16());
-                case SValue.Type.Int32:
-                    return DataSerializeUtils.UObjectNew<Int32>(value.ToInt32());
-                case SValue.Type.Int64:
-                    return DataSerializeUtils.UObjectNew<Int64>(value.ToInt64());
-                case SValue.Type.UInt8:
-                    return DataSerializeUtils.UObjectNew<byte>(value.ToUInt8());
-                case SValue.Type.UInt16:
-                    return DataSerializeUtils.UObjectNew<UInt16>(value.ToUInt16());
-                case SValue.Type.UInt32:
-                    return DataSerializeUtils.UObjectNew<UInt32>(value.ToUInt32());
-                case SValue.Type.UInt64:
-                    return DataSerializeUtils.UObjectNew<UInt64>(value.ToUInt64());
-                case SValue.Type.String:
-                    return DataSerializeUtils.UObjectNew<String>(value.ToString());
-                case SValue.Type.Object:
-                    return DataSerializeUtils.UObjectNew(value.ToObject().GetType(), value.ToObject());
-                default:
-                    throw new Exception("UnSupported SValue Type");
-            }
-        }
-
-        public IntPtr UObjectNew(Type t, object value)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
     public class EnumSerializer<T> : IDataSerializer<T>
     {
         public IntPtr UObjectNew(T value)
@@ -775,6 +699,10 @@ namespace SunnyMobile.UnmanagedBuffer
 
             return null;
         }
+    }
+
+    public class GenericListSerializer<T>
+    {
     }
 
     /// <summary>

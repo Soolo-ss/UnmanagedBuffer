@@ -56,7 +56,7 @@ namespace UnmanagedBuffer
 		if (keyname.empty())
 			return;
 
-		std::string valuename;
+		std::string valuename; 
 		bpos = epos;
 		epos = typeName.find_last_of(">");
 		valuename = typeName.substr(bpos + 1, epos - bpos - 1);

@@ -95,7 +95,6 @@ EXPORT void* UClassObject_GetField(void* uObj, const char* field);
 /*
 * @brief UListObject的函数簇
 */
-EXPORT Int32 UTypeList_New(const char* elementType);
 EXPORT Int32 UObjectList_Count(void* uObj);
 EXPORT void* UObjectList_GetItem(void* uObj, Int32 index);
 EXPORT void UObjectList_SetItem(void* uObj, void* value, Int32 index);
@@ -105,7 +104,6 @@ EXPORT void UObjectList_Clear(void* uObj);
 /*
 * @brief UDictObject的函数簇
 */
-EXPORT Int32 UTypeDict_New(const char* keyType, const char* valueType);
 EXPORT Int32 UObjectDict_Count(void* uObj);
 EXPORT void* UObjectDict_GetItem(void* uObj, void* keyObj);
 EXPORT void UObjectDict_SetItem(void* uObj, void* keyObj, void* valueObj);
